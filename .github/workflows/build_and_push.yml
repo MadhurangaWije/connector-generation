@@ -33,6 +33,6 @@ jobs:
           env: 
             BALLERINA_CENTRAL_ACCESS_TOKEN = ${{ secrets.BALLERINATOKEN }}
           args: 
-            push 
+            push ./connector1/v0.0.1/
           
           
