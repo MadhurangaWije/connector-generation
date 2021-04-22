@@ -1,0 +1,35 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      
+  workflow_dispatch:
+  
+jobs:
+
+  build:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Connector code generation from ballerina OpenAPI tool
+        run: Connector code generated
+
+      - name: Connector build
+        uses: ballerina-platform/ballerina-action/@master
+        with: |
+          args: build -c
+      - name: Push the connector to Ballerina Central
+        uses: ballerina-platform/ballerina-action/@master
+        env: 
+            BALLERINA_CENTRAL_ACCESS_TOKEN = ${{ secrets.BallerinaToken }}
+        with: |
+          args: push
+          
+          
