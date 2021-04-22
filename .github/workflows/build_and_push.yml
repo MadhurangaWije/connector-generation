@@ -21,8 +21,9 @@ jobs:
 
       - name: Connector build
         uses: ballerina-platform/ballerina-action/@master
-        with: |
-          args: build -c
+        with:
+          args: 
+            build -c
       - name: Push the connector to Ballerina Central
         uses: ballerina-platform/ballerina-action/@master
         with:
