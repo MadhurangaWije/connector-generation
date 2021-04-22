@@ -18,6 +18,9 @@ jobs:
 
       - name: Connector code generation from ballerina OpenAPI tool
         run:  echo Connector code generated
+      
+      - name: Change the directory to the connector code directory
+        run: cd connector1/v0.0.1
 
       - name: Connector build
         uses: ballerina-platform/ballerina-action/@master
