@@ -25,9 +25,10 @@ jobs:
           args: build -c
       - name: Push the connector to Ballerina Central
         uses: ballerina-platform/ballerina-action/@master
-        env: 
+        with:
+          env: 
             BALLERINA_CENTRAL_ACCESS_TOKEN = ${{ secrets.BALLERINATOKEN }}
-        with: |
-          args: push
+          args: 
+            push 
           
           
