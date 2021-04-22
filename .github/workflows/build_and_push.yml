@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Connector code generation from ballerina OpenAPI tool
-        run: Connector code generated
+        run:  echo Connector code generated
 
       - name: Connector build
         uses: ballerina-platform/ballerina-action/@master
